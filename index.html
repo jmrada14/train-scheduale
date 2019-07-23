@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Schedule</title>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
@@ -62,14 +63,16 @@
                             <label for="frequencyInput">Frequency (min)</label>
                             <input class="form-control" id="frequencyInput" type="text">
                         </div>
-                        <button class="btn btn-primary" id="addDestinationButton" type="submit">Submit</button>
+                        <button class="btn btn-primary" id="submit" type="submit">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
     </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
