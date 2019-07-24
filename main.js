@@ -1,17 +1,20 @@
-
-// Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBToEAN7SqIAizc1ftGyuJGoNUT0jqVsfI",
-    authDomain: "train-schedule-adaa5.firebaseapp.com",
-    databaseURL: "https://train-schedule-adaa5.firebaseio.com",
-    projectId: "train-schedule-adaa5",
-    storageBucket: "train-schedule-adaa5.appspot.com",
-    messagingSenderId: "974824042799",
-    appId: "1:974824042799:web:4e48e5afda5e9aa7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var dataRef = firebase.database();
+$(document).ready(function() {
+var firebaseConfig = {
+    
+        apiKey: "AIzaSyDZiZZ1JW5O6XAHtxKpyW52oDt4HazHf7o",
+        authDomain: "train-26a99.firebaseapp.com",
+        databaseURL: "https://train-26a99.firebaseio.com",
+        projectId: "train-26a99",
+        storageBucket: "",
+        messagingSenderId: "909724697017",
+        appId: "1:909724697017:web:9a87c566a98a2cf1"
+      };
+   
+   
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+   var database = firebase.database();
+   console.log(database);
 
   $("#submit").on("click" , function(event){
 event.preventDefault();
@@ -33,5 +36,24 @@ var output = {
 }
 
 database.ref().push(output)
+console.log(output)
+
+$("#trainNameInput").val("");
+$("#destinationInput").val("");
+$("#firstTrainInput").val("");
+$("#frequencyInput").val("");
   }
   )
+
+  database.ref().on("child_added", function(childSnapshot, key)
+  {
+console.log(childSnapshot.val());
+var trainName = childSnapshot.val().trainNameBase;
+var destination = childSnapshot.val().destinationBase;
+var firstTrainTime = childSnapshot.val().firstTrainTimeBase;
+var frequency = childSnapshot.val().frequencyBase;
+
+  }
+  )
+}
+)
